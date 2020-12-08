@@ -10,6 +10,8 @@ CMD ["/opt/odoo/custom/src/upgrade-odoo"]
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
+RUN rm /opt/odoo/auto/odoo.conf
+
 LABEL maintainer="LasLabs Inc <support@laslabs.com>" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="Odoo Upgrade v10" \
